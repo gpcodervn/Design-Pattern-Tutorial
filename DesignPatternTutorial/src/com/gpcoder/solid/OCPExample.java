@@ -1,3 +1,6 @@
+/*
+ * https://gpcoder.com
+ */
 package com.gpcoder.solid;
 
 /**
