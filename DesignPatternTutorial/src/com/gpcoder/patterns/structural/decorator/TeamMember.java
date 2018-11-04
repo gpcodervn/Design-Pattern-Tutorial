@@ -6,8 +6,8 @@ public class TeamMember extends EmployeeDecorator {
 		super(employee);
 	}
 
-	public void performTask() {
-		System.out.println(this.employee.getName() + " is performing his assigned tasks.");
+	public void reportTask() {
+		System.out.println(this.employee.getName() + " is reporting his assigned tasks.");
 	}
 
 	public void coordinateWithOthers() {
@@ -17,7 +17,7 @@ public class TeamMember extends EmployeeDecorator {
 	@Override
 	public void doTask() {
 		employee.doTask();
-		performTask();
+		reportTask();
 		coordinateWithOthers();
 	}
 }
