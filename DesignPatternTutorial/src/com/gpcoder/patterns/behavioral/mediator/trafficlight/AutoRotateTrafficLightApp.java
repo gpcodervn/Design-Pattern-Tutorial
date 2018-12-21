@@ -13,18 +13,16 @@ public class AutoRotateTrafficLightApp {
 				new Light("Yellow", lightMediator)
 		};
 		
-		int currentLightIndex = -1;
+		int currentLightIndex = 0;
 		Light light;
 		while (true) {
-			currentLightIndex++;
 			if (currentLightIndex >= lights.length) {
-				light = lights[0];
 				currentLightIndex = 0;
-			} else {
-				light = lights[currentLightIndex];
 			}
+			light = lights[currentLightIndex];
 			light.turnOn();
 			timer();
+			currentLightIndex++;
 		}
 	}
 
