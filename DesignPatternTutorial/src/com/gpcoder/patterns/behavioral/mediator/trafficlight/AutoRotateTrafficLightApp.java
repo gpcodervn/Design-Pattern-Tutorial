@@ -19,6 +19,7 @@ public class AutoRotateTrafficLightApp {
 			currentLightIndex++;
 			if (currentLightIndex >= lights.length) {
 				light = lights[0];
+				currentLightIndex = 0;
 			} else {
 				light = lights[currentLightIndex];
 			}
