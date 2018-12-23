@@ -5,7 +5,7 @@ import java.util.List;
 
 import lombok.Data;
 
-enum LOGIN_STATUS {
+enum LoginStatus {
 	SUCCESS, FAILURE, INVALID, EXPIRED
 }
 
@@ -13,7 +13,7 @@ enum LOGIN_STATUS {
 class User {
 	private String email;
 	private String ip;
-	private LOGIN_STATUS status;
+	private LoginStatus status;
 }
 
 public class AccountService implements Subject {
@@ -47,7 +47,7 @@ public class AccountService implements Subject {
 		}
 	}
 
-	public void changeStatus(LOGIN_STATUS status) {
+	public void changeStatus(LoginStatus status) {
 		user.setStatus(status);
 		System.out.println("Status is changed");
 		this.notifyAllObserver();
@@ -56,11 +56,11 @@ public class AccountService implements Subject {
 	public void login() {
 
 		if (!this.isValidIP()) {
-			user.setStatus(LOGIN_STATUS.INVALID);
+			user.setStatus(LoginStatus.INVALID);
 		} else if (this.isValidEmail()) {
-			user.setStatus(LOGIN_STATUS.SUCCESS);
+			user.setStatus(LoginStatus.SUCCESS);
 		} else {
-			user.setStatus(LOGIN_STATUS.FAILURE);
+			user.setStatus(LoginStatus.FAILURE);
 		}
 
 		System.out.println("Login is handled");

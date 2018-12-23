@@ -5,7 +5,7 @@ public class ObserverPatternExample {
 	public static void main(String[] args) {
 		AccountService account1 = createAccount("contact@gpcoder.com", "127.0.0.1");
 		account1.login();
-		account1.changeStatus(LOGIN_STATUS.EXPIRED);
+		account1.changeStatus(LoginStatus.EXPIRED);
 
 		System.out.println("---");
 		AccountService account2 = createAccount("contact@gpcoder.com", "116.108.77.231");
