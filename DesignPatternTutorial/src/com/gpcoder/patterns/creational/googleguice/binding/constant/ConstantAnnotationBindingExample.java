@@ -26,7 +26,7 @@ class UserController {
         System.out.println(message);
     }
 }
-public class NameAnnotationBindingExample {
+public class ConstantAnnotationBindingExample {
 	public static void main(String[] args) {
 		Injector injector = Guice.createInjector(new FirstModule());
 		UserController userController = injector.getInstance(UserController.class);

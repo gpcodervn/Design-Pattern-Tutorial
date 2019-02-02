@@ -31,7 +31,7 @@ class UserController {
         messageService.sendMessage("@ProvidedBy annotation binding example");
     }
 }
-public class ImplementatedByAnnotationBindingExample {
+public class ProvidedByAnnotationBindingExample {
 	public static void main(String[] args) {
 		Injector injector = Guice.createInjector();
 		UserController userController = injector.getInstance(UserController.class);
